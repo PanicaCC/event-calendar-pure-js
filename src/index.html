@@ -5,10 +5,36 @@
     <title>Event Calendar</title>
 </head>
 <body>
-    <div class="contaainer">
-        <div class="test">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa doloribus ducimus excepturi facilis laudantium odio vitae voluptate voluptates. Cupiditate, dolor error facilis laborum magni obcaecati vel. Ad distinctio dolor facilis neque recusandae tenetur voluptates. Beatae, deleniti doloremque eum expedita facilis, id impedit ipsam, iure magnam molestiae molestias natus nemo quo quos ratione repudiandae sit ullam veritatis! Dolore eligendi eos magni natus! Amet aspernatur cupiditate ea magnam magni obcaecati placeat praesentium quas sequi! A ab accusamus animi architecto atque, aut beatae dicta dolore dolorem ducimus ea expedita illo ipsam maxime modi nobis nulla obcaecati quod quos reprehenderit sequi tempore vel veritatis.</h1>
+    <header class="header">
+
+    </header>
+    <main>
+        <div class="events">
+            <div class="container">
+                <div class="events__calendar">
+                    <div class="events__calendar--head head">
+                        <div class="head__info">
+                            <h4 id="roomNumber" class="head__title">Calendar for meeting room <span>#13</span></h4>
+                            <div class="head__info--events">
+                                <p id="eventsCount" class="head__event">Events of the week - <span>0</span></p>
+                                <button class="btn btn-success btn-sm" id="addEvent" type="button">New event +</button>
+                            </div>
+                        </div>
+
+                        <div id="eventMembers" class="dropdown">
+                            <button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All members
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+                        </div>
+                    </div>
+                    <div class="events__calendar--view" id="calendar"></div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
 </body>
 </html>
