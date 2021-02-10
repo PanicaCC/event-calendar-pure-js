@@ -17,7 +17,7 @@
                             <h4 id="roomNumber" class="head__title">Calendar for meeting room <span>#13</span></h4>
                             <div class="head__info--events">
                                 <p id="eventsCount" class="head__event">Events of the week - <span>0</span></p>
-                                <button class="btn btn-success btn-sm" id="addEvent" type="button">New event +</button>
+                                <a href="create-event.html" class="btn btn-success btn-sm" id="addEvent">New event +</a>
                             </div>
                         </div>
 
@@ -36,5 +36,27 @@
     <footer class="footer">
 
     </footer>
+
+    <div id="eventModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><b>Participants:</b></p>
+                    <ul class="js-member-in-modal"></ul>
+                </div>
+                <div class="modal-footer">
+<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                    <button type="button" class="btn btn-danger" id="deleteEvent">Delete event</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

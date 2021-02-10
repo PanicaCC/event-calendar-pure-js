@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.12.13",
-    "normalize.css": "^8.0.1"
+    "axios": "^0.21.1",
+    "normalize.css": "^8.0.1",
+    "select-pure": "^0.6.1"
   }
 }

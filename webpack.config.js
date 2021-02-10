@@ -9,8 +9,14 @@ module.exports = {
         main: ['@babel/polyfill', './app.js']
     },
     output: {
-        filename: '[name].[hash].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'public')
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public'),
+        compress: false,
+        port: 9000,
+        historyApiFallback: true,
     },
     optimization: {
         splitChunks: {
@@ -40,6 +46,10 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: './index.html'
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'create-event.html',
+            template: './create-event.html'
         }),
         new CleanWebpackPlugin()
     ]
