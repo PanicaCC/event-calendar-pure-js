@@ -155,14 +155,12 @@ function formAction(data) {
     })
 }
 
-function CreateEventCell(data){
+function createEventCell(data){
     const eventsCell = document.getElementsByClassName('js-cell');
     for(let k = 0; k<eventsCell.length; k++ ){
+        eventsCell[k].innerHTML = '';
         Object.entries(data).map((item) => {
             if (eventsCell[k].dataset.day === item[1].day && eventsCell[k].dataset.time === item[1].time){
-                console.log('test1')
-                console.log(data)
-                eventsCell[k].innerHTML = '';
                 eventsCell[k].setAttribute('data-member', item[1].member)
                 eventsCell[k].setAttribute('data-id', item[0])
                 eventsCell[k].append(item[1].name);
@@ -293,7 +291,7 @@ if (window.location.pathname !== '/'){
             appendEventCell();
         }
         createDayEvent();
-        CreateEventCell(stateEvent);
+        createEventCell(stateEvent);
     })
 
     const instanceSort = new SelectPure(".sort_select", {
@@ -309,7 +307,6 @@ if (window.location.pathname !== '/'){
                 updateStateEvent[item[0]] = item[1]
             }
         })
-        console.log(updateStateEvent)
-        CreateEventCell(updateStateEvent) //todo continued with sort member
+        createEventCell(member === '10' ? stateEvent : updateStateEvent)
     }
 }
