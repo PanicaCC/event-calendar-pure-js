@@ -2,6 +2,20 @@
 import 'bootstrap'
 import SelectPure from 'select-pure';
 import axios from "axios";
+import firebase from "firebase/app";
+
+//Firebase
+let firebaseConfig = {
+    apiKey: "AIzaSyCVOvXLPU8rJtnPZ5tNQatAVrY_HvMUWhM",
+    authDomain: "event-team-calendar.firebaseapp.com",
+    databaseURL: "https://event-team-calendar-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "event-team-calendar",
+    storageBucket: "event-team-calendar.appspot.com",
+    messagingSenderId: "232562902560",
+    appId: "1:232562902560:web:44f415b15cd1eb52c59e45"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 //styles
 import './scss/index.css'
