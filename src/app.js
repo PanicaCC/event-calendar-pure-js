@@ -119,9 +119,11 @@ function formAction(data) {
         multiple: false
     });
 
-    const clearSelectValue = document.getElementById('clearSelectValue');
-    clearSelectValue.onclick = () => {
-        instance.reset();
+    window.onload = function (){
+        const clearSelectValue = document.getElementById('clearSelectValue');
+        clearSelectValue.onclick = () => {
+            instance.reset();
+        }
     }
 
     const createEventForm = document.getElementById('createEventForm');
@@ -183,7 +185,7 @@ function createEventCell(data){
     }
 }
 
-if (window.location.pathname !== '/'){
+if (window.location.pathname !== '/' || window.location.pathname !== '/event-calendar.github.io/'){
     window.onload = function(){
         let state = makeGetRequest()
         formAction(state);
