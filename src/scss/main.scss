@@ -35,6 +35,14 @@ ul, ol {
           }
         }
       }
+
+      &__sort {
+        width: 200px;
+        .select-pure__select {
+          min-height: 31px;
+          font-size: 14px;
+        }
+      }
     }
 
     &--view {
@@ -74,7 +82,10 @@ ul, ol {
         }
 
         &__row {
+          display: flex;
+          align-items: center;
           width: 100%;
+          height: 36px;
 
           &--cell {
             width: calc(100% / 5);
@@ -83,6 +94,7 @@ ul, ol {
             padding: 5px 10px;
             border: 1px solid #ccc;
             transition: all ease-in-out .3s;
+            height: 100%;
 
             &:hover {
               background: rgba(33, 12, 17, .1);
